@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-item lines="none">
+      <ion-label>
+        <p>
+          <ion-text>Purchase Order Approval</ion-text>
+        </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-row>
+      <img src="../../../assets/images/approver.png" width="25" height="25" alt="Approver">
+      <ion-text class="approver" [textContent]="approverName"></ion-text>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="spinner-container">
+    <div *ngIf="data.length === 0">
+      <ion-spinner></ion-spinner>
+    </div>
+    <div *ngIf="data.length > 0">
+      <ion-card class="chart-card">
+        <ion-card-header>
+          <ion-card-title>Purchase Order Status</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ngx-charts-pie-chart [doughnut]="true" [arcWidth]="0.5" [gradient]="true" [results]="data"
+            [explodeSlices]="false" [labels]="true" [animations]="true">
+          </ngx-charts-pie-chart>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

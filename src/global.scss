@@ -34,4 +34,14 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+/*@import '@ionic/angular/css/palettes/dark.system.css'; */
+
+    ion-icon {
+      color: rgb(42, 22, 155);
+    }
+
+    ion-button {
+  --background: linear-gradient(rgb(31, 21, 90) , rgb(44, 37, 145));
+  --color: #ffffff;
+}
+
